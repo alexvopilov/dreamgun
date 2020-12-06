@@ -35,8 +35,8 @@
 
 <footer>
     <script type="text/javascript">
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * Math.floor(max))+min;
         }
 
         var dreamgun = document.getElementById("dreamgun");
