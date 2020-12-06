@@ -40,14 +40,16 @@
         }
 
         var dreamgun = document.getElementById("dreamgun");
-        for(let i = 0; i < 2000; i++) {
-            dreamgun.innerHTML = dreamgun.innerHTML + "<div id='cell"+i+"'>1</div>";
+        var CELLS = 600;
+
+        for(let i = 0; i < CELLS; i++) {
+            dreamgun.innerHTML = dreamgun.innerHTML + "<div id='cell"+i+"'></div>";
         }
 
         setInterval(function () {
-            for(let i = 0; i < 2000; i++) {
+            for(let i = 0; i < CELLS; i++) {
                 cell = document.getElementById("cell"+i);
-                sol = getRandomInt(2);
+                sol = getRandomInt(0,2);
                 if(sol==0) {
                     cell.style.color = "white";
                     cell.style.backgroundColor = "black";
