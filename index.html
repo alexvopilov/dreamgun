@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dreamgun</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        #dreamgun {
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        #dreamgun > div {
+            background: #ffffff;
+            padding: 6px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="dreamgun">
+
+</div>
+
+<footer>
+    <script type="text/javascript">
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        var dreamgun = document.getElementById("dreamgun");
+        for(let i = 0; i < 2000; i++) {
+            dreamgun.innerHTML = dreamgun.innerHTML + "<div id='cell"+i+"'>1</div>";
+        }
+
+        setInterval(function () {
+            for(let i = 0; i < 2000; i++) {
+                cell = document.getElementById("cell"+i);
+                sol = getRandomInt(2);
+                if(sol==0) {
+                    cell.style.color = "white";
+                    cell.style.backgroundColor = "black";
+                }
+                else if(sol==1) {
+                    cell.style.color = "black";
+                    cell.style.backgroundColor = "white";
+                }
+                cell.innerText = sol;
+            }
+        },100);
+    </script>
+</footer>
+</body>
+</html>
