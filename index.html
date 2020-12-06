@@ -51,14 +51,14 @@
                 cell = document.getElementById("cell"+i);
                 sol = getRandomInt(0,2);
                 if(sol==0) {
-                    cell.style.color = "white";
-                    cell.style.backgroundColor = "black";
+                    cell.style.color = "rgb(50,0,"+getRandomInt(100,150)+")";
+                    cell.style.backgroundColor = "rgb(50,0,"+getRandomInt(0,220)+")";
                 }
                 else if(sol==1) {
-                    cell.style.color = "black";
-                    cell.style.backgroundColor = "white";
+                    cell.style.color = "rgb(50,0,"+getRandomInt(0,220)+",0)";
+                    cell.style.backgroundColor = "rgb(50,0,"+getRandomInt(100,150)+")";
                 }
-                cell.innerText = sol;
+                //cell.innerText = sol;
             }
         },100);
     </script>
